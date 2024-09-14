@@ -1,0 +1,14 @@
+{
+    "name": "sharukh-jira",
+    "version": "0.1.0",
+    "description": "sharukh-jira",
+    "permissions": ["scripting"],
+    "host_permissions": ["*://*/*"],
+    "manifest_version": 3,
+    "content_scripts": [
+      {
+        "matches": ["*://*/*"],
+        "js": ["contentScript.js"]
+      }
+    ]
+  }
