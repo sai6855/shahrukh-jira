@@ -17,7 +17,11 @@ const options = {
 };
 
 const timer = setInterval(() => {
-  console.log("Hello World");
+  if (!window.location.href.includes("atlassian.net")) {
+    clearInterval(timer);
+    return;
+  }
+
   const header = document.getElementById("jira-issue-header");
 
   if (header) {
